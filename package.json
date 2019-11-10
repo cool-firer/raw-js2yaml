@@ -1,0 +1,26 @@
+{
+  "name": "raw-js2yaml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cool-firer/raw-js2yaml.git"
+  },
+  "keywords": [
+    "json",
+    "yaml"
+  ],
+  "author": "cool-firer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cool-firer/raw-js2yaml/issues"
+  },
+  "homepage": "https://github.com/cool-firer/raw-js2yaml#readme",
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
+}
