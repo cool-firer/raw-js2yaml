@@ -21,6 +21,8 @@ describe('', function() {
         c2: 'c2',
       }],
       e: 123,
+      f: 'a:a b:b',
+      g: 'a: a, b: b'
     };
     const str = js2YamlString(obj);
     const fs = require('fs');
