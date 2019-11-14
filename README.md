@@ -8,7 +8,7 @@ $ npm install raw-js2yaml
 
 ## Usage
 
-Unlike `js-yaml`、`json-to-pretty-yaml` or other packages, The purpose of this pacakge is to convert json object to yaml string without converting  json value(double quotes json values), that is why called raw.
+Unlike `js-yaml`、`json-to-pretty-yaml` or other packages, The purpose of this package is to convert json object to yaml string without converting  json value(double quotes json values), that is why called raw.
 
 ## Example
 
