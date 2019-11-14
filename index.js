@@ -19,9 +19,8 @@ module.exports = function toYamlString(v, k, indent, prefix, padding) {
   if ([ 'string', 'number', 'boolean' ].includes(typeof v)) {
     return `${' '.repeat(indent)}${prefix}${padding}${k ? k + ': ' : ''}${quote(v + '')}\n`;
   }
-  // array type
+
   if (Array.isArray(v)) {
-    // emtpy array
     if (v.length === 0) {
       return `${' '.repeat(indent)}${prefix}${padding}${k ? k + ': ' : ''}[]\n`;
     }
@@ -29,15 +28,13 @@ module.exports = function toYamlString(v, k, indent, prefix, padding) {
     if (k) {
       res = `${' '.repeat(indent)}${prefix}${padding}${k ? k + ':\n' : ''}`;
     } else {
-      if (prefix === '-') {
-        res = `${' '.repeat(indent)}-\n`;
-      }
+      res = prefix === '-' ? `${' '.repeat(indent)}-\n` : res;
     }
     for (let i = 0; i < v.length; i++) {
       res += toYamlString(v[i], '', indent + 2, '-', ' ');
     }
     return res;
-  } // end for array
+  }
 
   if (typeof v === 'object') {
     if (!v || Object.keys(v).length === 0) {
@@ -45,7 +42,6 @@ module.exports = function toYamlString(v, k, indent, prefix, padding) {
     }
     let incr = 0;
     let res = '';
-
     if (k) {
       res = `${' '.repeat(indent)}${prefix}${padding}${k + ':\n'}`;
       incr = 2;
