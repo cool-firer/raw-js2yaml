@@ -8,6 +8,9 @@ function quote(str) {
   if (/#/.test(str)) {
     return `"${str}"`;
   }
+  if(/\n/.test(str)) {
+    return `"${str.replace(/"/g, '\\"')}"`;
+  }
   return str;
 }
 
